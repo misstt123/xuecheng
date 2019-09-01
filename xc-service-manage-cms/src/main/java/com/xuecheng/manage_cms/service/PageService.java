@@ -1,5 +1,6 @@
 package com.xuecheng.manage_cms.service;
 
+import com.xuecheng.framework.domain.cms.CmsConfig;
 import com.xuecheng.framework.domain.cms.CmsPage;
 import com.xuecheng.framework.domain.cms.request.QueryPageRequest;
 import com.xuecheng.framework.domain.cms.response.CmsCode;
@@ -9,6 +10,7 @@ import com.xuecheng.framework.model.response.CommonCode;
 import com.xuecheng.framework.model.response.QueryResponseResult;
 import com.xuecheng.framework.model.response.QueryResult;
 import com.xuecheng.framework.model.response.ResponseResult;
+import com.xuecheng.manage_cms.dao.CmsConfigRepository;
 import com.xuecheng.manage_cms.dao.CmsPageRepository;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,7 +29,8 @@ public class PageService {
 
     @Autowired
     CmsPageRepository cmsPageRepository;
-
+    @Autowired
+    CmsConfigRepository cmsConfigRepository;
 
     /**
      * 页面查询方法
@@ -160,5 +163,14 @@ public class PageService {
             return new ResponseResult(CommonCode.SUCCESS);
         }
         return new ResponseResult(CommonCode.FAIL);
+    }
+    //根据id查询cmsConfig
+    public CmsConfig getConfigById(String id){
+        Optional<CmsConfig> optional = cmsConfigRepository.findById(id);
+        if(optional.isPresent()){
+            CmsConfig cmsConfig = optional.get();
+            return cmsConfig;
+        }
+        return null;
     }
 }

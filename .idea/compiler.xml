@@ -8,7 +8,10 @@
         <outputRelativeToContentRoot value="true" />
         <module name="xc-framework-common" />
         <module name="xc-framework-model" />
+        <module name="xc‐service‐manage‐cms‐client" />
+        <module name="test-rabbitmq-producer" />
         <module name="xc-framework-utils" />
+        <module name="test-rabbitmq-consumer" />
         <module name="test-freemarker" />
         <module name="xc-service-api" />
         <module name="xc-service-manage-cms" />
@@ -16,22 +19,28 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="test-freemarker" target="1.8" />
+      <module name="test-rabbitmq-consumer" target="1.8" />
+      <module name="test-rabbitmq-producer" target="1.8" />
       <module name="xc-framework-common" target="1.8" />
       <module name="xc-framework-model" target="1.8" />
       <module name="xc-framework-parent" target="1.8" />
       <module name="xc-framework-utils" target="1.8" />
       <module name="xc-service-api" target="1.8" />
       <module name="xc-service-manage-cms" target="1.8" />
+      <module name="xc‐service‐manage‐cms‐client" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="test-freemarker" options="-parameters" />
+      <module name="test-rabbitmq-consumer" options="-parameters" />
+      <module name="test-rabbitmq-producer" options="-parameters" />
       <module name="xc-framework-common" options="-parameters" />
       <module name="xc-framework-model" options="-parameters" />
       <module name="xc-framework-utils" options="-parameters" />
       <module name="xc-service-api" options="-parameters" />
       <module name="xc-service-manage-cms" options="-parameters" />
+      <module name="xc‐service‐manage‐cms‐client" options="-parameters" />
     </option>
   </component>
 </project>

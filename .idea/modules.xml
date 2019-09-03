@@ -9,6 +9,7 @@
       <module fileurl="file://$PROJECT_DIR$/xc-framework-utils/xc-framework-utils.iml" filepath="$PROJECT_DIR$/xc-framework-utils/xc-framework-utils.iml" />
       <module fileurl="file://$PROJECT_DIR$/xc-service-api/xc-service-api.iml" filepath="$PROJECT_DIR$/xc-service-api/xc-service-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/xc-service-manage-cms/xc-service-manage-cms.iml" filepath="$PROJECT_DIR$/xc-service-manage-cms/xc-service-manage-cms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xc-service-manage-course/xc-service-manage-course.iml" filepath="$PROJECT_DIR$/xc-service-manage-course/xc-service-manage-course.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/xcEduService01.iml" filepath="$PROJECT_DIR$/.idea/xcEduService01.iml" />
       <module fileurl="file://$PROJECT_DIR$/xc‐service‐manage‐cms‐client/xc‐service‐manage‐cms‐client.iml" filepath="$PROJECT_DIR$/xc‐service‐manage‐cms‐client/xc‐service‐manage‐cms‐client.iml" />
     </modules>

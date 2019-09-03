@@ -6,10 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="xc-service-manage-course" />
         <module name="xc-framework-common" />
-        <module name="xc-framework-model" />
         <module name="xc‐service‐manage‐cms‐client" />
         <module name="xc-framework-utils" />
+        <module name="xc-framework-model" />
         <module name="test-freemarker" />
         <module name="xc-service-api" />
         <module name="xc-service-manage-cms" />
@@ -23,6 +24,7 @@
       <module name="xc-framework-utils" target="1.8" />
       <module name="xc-service-api" target="1.8" />
       <module name="xc-service-manage-cms" target="1.8" />
+      <module name="xc-service-manage-course" target="1.8" />
       <module name="xc‐service‐manage‐cms‐client" target="1.8" />
     </bytecodeTargetLevel>
   </component>
@@ -34,6 +36,7 @@
       <module name="xc-framework-utils" options="-parameters" />
       <module name="xc-service-api" options="-parameters" />
       <module name="xc-service-manage-cms" options="-parameters" />
+      <module name="xc-service-manage-course" options="-parameters" />
       <module name="xc‐service‐manage‐cms‐client" options="-parameters" />
     </option>
   </component>

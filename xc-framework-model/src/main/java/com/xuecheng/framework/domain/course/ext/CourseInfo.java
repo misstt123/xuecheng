@@ -10,6 +10,8 @@ import lombok.ToString;
 @Data
 @ToString
 public class CourseInfo extends CourseBase {
+    private  String id;
+    private  String name;
 
     //课程图片
     private String pic;

@@ -21,9 +21,9 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 /**
- * @author Administrator
+ * @author lyh-god
  * @version 1.0
- * @create 2018-09-12 18:11
+ * @create 2019-09-12 18:11
  **/
 @SpringBootTest
 @RunWith(SpringRunner.class)
@@ -39,10 +39,10 @@ public class GridFsTest {
     @Test
     public void testStore() throws FileNotFoundException {
         //定义file
-        File file =new File("d:/index_banner.ftl");
+        File file =new File("d:/course.ftl");
         //定义fileInputStream
         FileInputStream fileInputStream = new FileInputStream(file);
-        ObjectId objectId = gridFsTemplate.store(fileInputStream, "index_banner.ftl");
+        ObjectId objectId = gridFsTemplate.store(fileInputStream, "course.ftl");
         System.out.println(objectId);
     }
 

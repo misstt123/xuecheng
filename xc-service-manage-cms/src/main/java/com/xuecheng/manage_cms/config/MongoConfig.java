@@ -9,9 +9,9 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * @author Administrator
+ * @author lyh-god
  * @version 1.0
- * @create 2018-09-15 15:15
+ * @create 2019-09-15 15:15
  **/
 @Configuration
 public class MongoConfig {

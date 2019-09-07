@@ -4,6 +4,7 @@ import com.xuecheng.api.cms.CmsPageControllerApi;
 import com.xuecheng.framework.domain.cms.CmsPage;
 import com.xuecheng.framework.domain.cms.request.QueryPageRequest;
 import com.xuecheng.framework.domain.cms.response.CmsPageResult;
+import com.xuecheng.framework.domain.course.response.CmsPostPageResult;
 import com.xuecheng.framework.model.response.QueryResponseResult;
 import com.xuecheng.framework.model.response.ResponseResult;
 import com.xuecheng.manage_cms.service.PageService;
@@ -11,9 +12,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 /**
- * @author Administrator
+ * @author lyh-god
  * @version 1.0
- * @create 2018-09-12 17:24
+ * @create 2019-09-12 17:24
  **/
 @RestController
 @RequestMapping("/cms/page")
@@ -70,5 +71,17 @@ public class CmsPageController implements CmsPageControllerApi {
     @PostMapping("/postPage/{pageId}")
     public ResponseResult post(@PathVariable("pageId") String pageId) {
         return pageService.post(pageId);
+    }
+
+    //保存页面，有就更新，没有就添加
+    @Override
+    @PostMapping("/save")
+    public CmsPageResult save(@RequestBody CmsPage cmsPage) {
+        return pageService.save(cmsPage);
+    }
+
+    @Override
+    public CmsPostPageResult postPageQuick(CmsPage cmsPage) {
+        return null;
     }
 }

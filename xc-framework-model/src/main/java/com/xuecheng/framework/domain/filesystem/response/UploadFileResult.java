@@ -8,8 +8,9 @@ import lombok.Data;
 import lombok.ToString;
 
 /**
- * Created by admin on 2018/3/5.
- */
+ * @author lyh-god
+ * @version 1.0
+ **/
 @Data
 @ToString
 public class UploadFileResult extends ResponseResult{

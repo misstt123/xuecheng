@@ -12,6 +12,12 @@
 
     <artifactId>xc-service-manage-cms</artifactId>
     <dependencies>
+        <!--微服务注册客户端 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+            <version>2.1.2.RELEASE</version>
+        </dependency>
         <dependency>
             <groupId>com.xuecheng</groupId>
             <artifactId>xc-service-api</artifactId>

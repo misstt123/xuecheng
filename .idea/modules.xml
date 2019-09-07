@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/test-fastdfs/test-fastdfs.iml" filepath="$PROJECT_DIR$/test-fastdfs/test-fastdfs.iml" />
       <module fileurl="file://$PROJECT_DIR$/test-freemarker/test-freemarker.iml" filepath="$PROJECT_DIR$/test-freemarker/test-freemarker.iml" />
       <module fileurl="file://$PROJECT_DIR$/xc-framework-common/xc-framework-common.iml" filepath="$PROJECT_DIR$/xc-framework-common/xc-framework-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/xc-framework-model/xc-framework-model.iml" filepath="$PROJECT_DIR$/xc-framework-model/xc-framework-model.iml" />
       <module fileurl="file://$PROJECT_DIR$/xc-framework-parent/xc-framework-parent.iml" filepath="$PROJECT_DIR$/xc-framework-parent/xc-framework-parent.iml" />
       <module fileurl="file://$PROJECT_DIR$/xc-framework-utils/xc-framework-utils.iml" filepath="$PROJECT_DIR$/xc-framework-utils/xc-framework-utils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xc-govern-center/xc-govern-center.iml" filepath="$PROJECT_DIR$/xc-govern-center/xc-govern-center.iml" />
       <module fileurl="file://$PROJECT_DIR$/xc-service-api/xc-service-api.iml" filepath="$PROJECT_DIR$/xc-service-api/xc-service-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/xc-service-base-filesystem/xc-service-base-filesystem.iml" filepath="$PROJECT_DIR$/xc-service-base-filesystem/xc-service-base-filesystem.iml" />
       <module fileurl="file://$PROJECT_DIR$/xc-service-manage-cms/xc-service-manage-cms.iml" filepath="$PROJECT_DIR$/xc-service-manage-cms/xc-service-manage-cms.iml" />

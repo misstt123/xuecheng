@@ -12,6 +12,9 @@
     <file url="file://$PROJECT_DIR$/xc-service-base-filesystem" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/xc-service-manage-cms" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/xc-service-manage-course" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xc-service-manage-media" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xc-service-manage-media-processor" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/xc-service-search" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/xc‐service‐manage‐cms‐client" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>

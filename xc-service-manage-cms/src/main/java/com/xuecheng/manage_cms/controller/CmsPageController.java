@@ -4,7 +4,7 @@ import com.xuecheng.api.cms.CmsPageControllerApi;
 import com.xuecheng.framework.domain.cms.CmsPage;
 import com.xuecheng.framework.domain.cms.request.QueryPageRequest;
 import com.xuecheng.framework.domain.cms.response.CmsPageResult;
-import com.xuecheng.framework.domain.course.response.CmsPostPageResult;
+import com.xuecheng.framework.domain.cms.response.CmsPostPageResult;
 import com.xuecheng.framework.model.response.QueryResponseResult;
 import com.xuecheng.framework.model.response.ResponseResult;
 import com.xuecheng.manage_cms.service.PageService;
@@ -73,15 +73,15 @@ public class CmsPageController implements CmsPageControllerApi {
         return pageService.post(pageId);
     }
 
-    //保存页面，有就更新，没有就添加
     @Override
     @PostMapping("/save")
-    public CmsPageResult save(@RequestBody CmsPage cmsPage) {
+    public CmsPageResult save(@RequestBody  CmsPage cmsPage) {
         return pageService.save(cmsPage);
     }
 
     @Override
-    public CmsPostPageResult postPageQuick(CmsPage cmsPage) {
-        return null;
+    @PostMapping("/postPageQuick")
+    public CmsPostPageResult postPageQuick(@RequestBody CmsPage cmsPage) {
+        return pageService.postPageQuick(cmsPage);
     }
 }

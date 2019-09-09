@@ -11,7 +11,7 @@ import com.xuecheng.framework.domain.cms.CmsTemplate;
 import com.xuecheng.framework.domain.cms.request.QueryPageRequest;
 import com.xuecheng.framework.domain.cms.response.CmsCode;
 import com.xuecheng.framework.domain.cms.response.CmsPageResult;
-import com.xuecheng.framework.domain.course.response.CmsPostPageResult;
+import com.xuecheng.framework.domain.cms.response.CmsPostPageResult;
 import com.xuecheng.framework.exception.ExceptionCast;
 import com.xuecheng.framework.model.response.CommonCode;
 import com.xuecheng.framework.model.response.QueryResponseResult;
@@ -54,7 +54,6 @@ import java.util.Optional;
 @Service
 public class PageService {
 
-
     @Autowired
     CmsPageRepository cmsPageRepository;
 
@@ -72,6 +71,7 @@ public class PageService {
 
     @Autowired
     GridFSBucket gridFSBucket;
+
     @Autowired
     RabbitTemplate rabbitTemplate;
 
@@ -126,21 +126,21 @@ public class PageService {
         return queryResponseResult;
     }
 
-/*    //新增页面
-    public CmsPageResult add(CmsPage cmsPage){
-        //校验页面名称、站点Id、页面webpath的唯一性
-        //根据页面名称、站点Id、页面webpath去cms_page集合，如果查到说明此页面已经存在，如果查询不到再继续添加
-        CmsPage cmsPage1 = cmsPageRepository.findByPageNameAndSiteIdAndPageWebPath(cmsPage.getPageName(), cmsPage.getSiteId(), cmsPage.getPageWebPath());
-        if(cmsPage1==null){
-            //调用dao新增页面
-            cmsPage.setPageId(null);
-            cmsPageRepository.save(cmsPage);
-            return new CmsPageResult(CommonCode.SUCCESS,cmsPage);
-        }
-        //添加失败
-        return new CmsPageResult(CommonCode.FAIL,null);
+    /*    //新增页面
+        public CmsPageResult add(CmsPage cmsPage){
+            //校验页面名称、站点Id、页面webpath的唯一性
+            //根据页面名称、站点Id、页面webpath去cms_page集合，如果查到说明此页面已经存在，如果查询不到再继续添加
+            CmsPage cmsPage1 = cmsPageRepository.findByPageNameAndSiteIdAndPageWebPath(cmsPage.getPageName(), cmsPage.getSiteId(), cmsPage.getPageWebPath());
+            if(cmsPage1==null){
+                //调用dao新增页面
+                cmsPage.setPageId(null);
+                cmsPageRepository.save(cmsPage);
+                return new CmsPageResult(CommonCode.SUCCESS,cmsPage);
+            }
+            //添加失败
+            return new CmsPageResult(CommonCode.FAIL,null);
 
-    }*/
+        }*/
     //新增页面
     public CmsPageResult add(CmsPage cmsPage) {
         if(cmsPage == null){
@@ -191,9 +191,8 @@ public class PageService {
             one.setPageWebPath(cmsPage.getPageWebPath());
             //更新物理路径
             one.setPagePhysicalPath(cmsPage.getPagePhysicalPath());
-            //更新dataurl
+            //更新dataUrl
             one.setDataUrl(cmsPage.getDataUrl());
-
             //提交修改
             cmsPageRepository.save(one);
             return new CmsPageResult(CommonCode.SUCCESS,one);
@@ -213,6 +212,7 @@ public class PageService {
         }
         return new ResponseResult(CommonCode.FAIL);
     }
+
     //根据id查询cmsConfig
     public CmsConfig getConfigById(String id){
         Optional<CmsConfig> optional = cmsConfigRepository.findById(id);
@@ -222,6 +222,7 @@ public class PageService {
         }
         return null;
     }
+
 
     //页面静态化方法
     /**
@@ -335,6 +336,7 @@ public class PageService {
         return body;
 
     }
+
     //页面发布
     public ResponseResult post(String pageId){
         //执行页面静态化
@@ -385,7 +387,6 @@ public class PageService {
         cmsPageRepository.save(cmsPage);
         return cmsPage;
     }
-
     //保存页面，有则更新，没有则添加
     public CmsPageResult save(CmsPage cmsPage) {
         //判断页面是否存在

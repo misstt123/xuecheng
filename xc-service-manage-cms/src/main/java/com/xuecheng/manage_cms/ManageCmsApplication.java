@@ -15,7 +15,7 @@ import org.springframework.web.client.RestTemplate;
  * @version 1.0
  * @create 2019-09-6 17:13
  **/
-@EnableDiscoveryClient
+@EnableDiscoveryClient //一个EurekaClient从EurekaServer发现服务
 @SpringBootApplication
 @EntityScan("com.xuecheng.framework.domain.cms")//扫描实体类
 @ComponentScan(basePackages={"com.xuecheng.api"})//扫描接口
@@ -30,4 +30,5 @@ public class ManageCmsApplication {
     public RestTemplate restTemplate(){
         return new RestTemplate(new OkHttp3ClientHttpRequestFactory());
     }
+
 }

@@ -13,6 +13,7 @@
         <module name="xc‐service‐manage‐cms‐client" />
         <module name="xc-service-base-filesystem" />
         <module name="xc-framework-common" />
+        <module name="xc-service-learning" />
         <module name="xc-govern-center" />
         <module name="test-fastdfs" />
         <module name="xc-service-manage-media" />
@@ -32,6 +33,7 @@
       <module name="xc-govern-center" target="1.8" />
       <module name="xc-service-api" target="1.8" />
       <module name="xc-service-base-filesystem" target="1.8" />
+      <module name="xc-service-learning" target="1.8" />
       <module name="xc-service-manage-cms" target="1.8" />
       <module name="xc-service-manage-course" target="1.8" />
       <module name="xc-service-manage-media" target="1.8" />
@@ -50,6 +52,7 @@
       <module name="xc-govern-center" options="-parameters" />
       <module name="xc-service-api" options="-parameters" />
       <module name="xc-service-base-filesystem" options="-parameters" />
+      <module name="xc-service-learning" options="-parameters" />
       <module name="xc-service-manage-cms" options="-parameters" />
       <module name="xc-service-manage-course" options="-parameters" />
       <module name="xc-service-manage-media" options="-parameters" />

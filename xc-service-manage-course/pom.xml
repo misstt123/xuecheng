@@ -11,7 +11,14 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>xc-service-manage-course</artifactId>
+
     <dependencies>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-oauth2</artifactId>
+            <version>2.0.1.RELEASE</version>
+        </dependency>
+
         <!-- ribbin，用来测试-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>

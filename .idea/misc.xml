@@ -22,6 +22,7 @@
         <option value="$PROJECT_DIR$/xc-service-manage-media/pom.xml" />
         <option value="$PROJECT_DIR$/xc-service-manage-media-processor/pom.xml" />
         <option value="$PROJECT_DIR$/xc-service-learning/pom.xml" />
+        <option value="$PROJECT_DIR$/xc-service-ucenter-auth/pom.xml" />
       </list>
     </option>
   </component>

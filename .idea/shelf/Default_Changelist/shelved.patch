@@ -1,0 +1,10 @@
+Index: test-fastdfs/target/classes/config/fastdfs-client.properties
+===================================================================
+--- test-fastdfs/target/classes/config/fastdfs-client.properties	(date 1568193706000)
++++ test-fastdfs/target/classes/config/fastdfs-client.properties	(date 1568193706000)
+@@ -1,4 +0,0 @@
+-fastdfs.connect_timeout_in_seconds = 5
+-fastdfs.network_timeout_in_seconds = 30
+-fastdfs.charset = UTF-8
+-fastdfs.tracker_servers = 192.168.138.131:22122
+\ No newline at end of file

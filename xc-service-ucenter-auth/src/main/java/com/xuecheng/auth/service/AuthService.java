@@ -79,6 +79,27 @@ public class AuthService {
         Long expire = stringRedisTemplate.getExpire(key, TimeUnit.SECONDS);
         return expire>0;
     }
+    //删除token
+    public boolean delToken(String access_token){
+        String key = "user_token:" + access_token;
+        stringRedisTemplate.delete(key);
+        return true;
+    }
+    //从redis查询令牌
+    public AuthToken getUserToken(String token){
+        String key = "user_token:" + token;
+        //从redis中取到令牌信息
+        String value = stringRedisTemplate.opsForValue().get(key);
+        //转成对象
+        try {
+            AuthToken authToken = JSON.parseObject(value, AuthToken.class);
+            return authToken;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+
+    }
     //申请令牌
     private AuthToken applyToken(String username, String password, String clientId, String clientSecret){
         //从eureka中获取认证服务的地址（因为spring security在认证服务中）
@@ -117,9 +138,21 @@ public class AuthService {
         //申请令牌信息
         Map bodyMap = exchange.getBody();
         if(bodyMap == null ||
-            bodyMap.get("access_token") == null ||
+                bodyMap.get("access_token") == null ||
                 bodyMap.get("refresh_token") == null ||
                 bodyMap.get("jti") == null){
+
+            //解析spring security返回的错误信息
+            if(bodyMap!=null && bodyMap.get("error_description")!=null){
+                String error_description = (String) bodyMap.get("error_description");
+                if(error_description.indexOf("UserDetailsService returned null")>=0){
+                    ExceptionCast.cast(AuthCode.AUTH_ACCOUNT_NOTEXISTS);
+                }else if(error_description.indexOf("坏的凭证")>=0){
+                    ExceptionCast.cast(AuthCode.AUTH_CREDENTIAL_ERROR);
+                }
+            }
+
+
             return null;
         }
         AuthToken authToken = new AuthToken();

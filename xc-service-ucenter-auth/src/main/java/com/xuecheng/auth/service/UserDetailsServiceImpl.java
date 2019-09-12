@@ -1,5 +1,6 @@
 package com.xuecheng.auth.service;
 
+import com.xuecheng.auth.client.UserClient;
 import com.xuecheng.framework.domain.ucenter.XcMenu;
 import com.xuecheng.framework.domain.ucenter.ext.XcUserExt;
 import org.apache.commons.lang3.StringUtils;
@@ -28,6 +29,9 @@ import java.util.List;
 public class UserDetailsServiceImpl implements UserDetailsService {
 
     @Autowired
+    UserClient userClient;
+
+    @Autowired
     ClientDetailsService clientDetailsService;
 
     @Override
@@ -46,13 +50,17 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         if (StringUtils.isEmpty(username)) {
             return null;
         }
-        XcUserExt userext = new XcUserExt();
-        userext.setUsername("itcast");
-        userext.setPassword(new BCryptPasswordEncoder().encode("123"));
-        userext.setPermissions(new ArrayList<XcMenu>());
+        //远程调用用户中心根据账号查询用户信息
+        XcUserExt userext = userClient.getUserext(username);
         if(userext == null){
+            //返回空给spring security表示用户不存在
             return null;
         }
+//        XcUserExt userext = new XcUserExt();
+//        userext.setUsername("itcast");
+//        userext.setPassword(new BCryptPasswordEncoder().encode("123"));
+        userext.setPermissions(new ArrayList<XcMenu>());//权限暂时用静态的
+
         //取出正确密码（hash值）
         String password = userext.getPassword();
         //这里暂时使用静态密码

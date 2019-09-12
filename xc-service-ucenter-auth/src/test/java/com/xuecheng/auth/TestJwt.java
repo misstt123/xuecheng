@@ -18,7 +18,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @author lyh-god
+ * @author Administrator
  * @version 1.0
  **/
 @SpringBootTest
@@ -29,7 +29,7 @@ public class TestJwt {
     @Test
     public void testCreateJwt(){
         //密钥库文件
-        String keystore = "xc1.keystore";
+        String keystore = "xc.keystore";
         //密钥库的密码
         String keystore_password = "xuechengkeystore";
 
@@ -61,9 +61,9 @@ public class TestJwt {
     @Test
     public void testVerify(){
         //公钥
-        String publickey = "-----BEGIN PUBLIC KEY-----MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAljJN7gYuIpcATfidfNsvnuT73GJcebFXQjyjf5R07bMBJPMu1Y3HsdxQWzPF937C3BzDm23bZ+k5LSTjruT2Vi5am+ZJQYNTJvgKFE9w9TvUH7yjWP7aC8mKAKp8KzGV3/oTcwLScKp2wNRXkMSPpEnpRkGqAQ0i4OxvE25FBXlZ6KB86ROeJ+p8LYeE4H97gUZIDYLU8DvndsVBKcJOTCDwe557W8Q6zr1iHLVyV4Sx9GaUmkpqjCQZoh18vG++byXeVQvorkAh03GZDfU0xMvJEQk3hVfxio6F6rG+IviwKK3dAiKkZvHdPghV+KCeCfCx4qWzSmN24Ro+m3laNwIDAQAB-----END PUBLIC KEY-----";
+        String publickey = "-----BEGIN PUBLIC KEY-----MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnASXh9oSvLRLxk901HANYM6KcYMzX8vFPnH/To2R+SrUVw1O9rEX6m1+rIaMzrEKPm12qPjVq3HMXDbRdUaJEXsB7NgGrAhepYAdJnYMizdltLdGsbfyjITUCOvzZ/QgM1M4INPMD+Ce859xse06jnOkCUzinZmasxrmgNV3Db1GtpyHIiGVUY0lSO1Frr9m5dpemylaT0BV3UwTQWVW9ljm6yR3dBncOdDENumT5tGbaDVyClV0FEB1XdSKd7VjiDCDbUAUbDTG1fm3K9sx7kO1uMGElbXLgMfboJ963HEJcU01km7BmFntqI5liyKheX+HBUCD4zbYNPw236U+7QIDAQAB-----END PUBLIC KEY-----";
         //jwt令牌
-        String jwtString = "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiaXRjYXN0In0.FTNAfKR-Phj7z3KF-fnNd_BDhX2z2yjqBw9gvDABB65-ijM59Ut4p4ilLL8anCGHWn5-ohXCvVSVXmRbQhdtdfn03VcQQPhxGNE5Bzay3jdxTKq4PmiJ81LX_FqknacK8VfyY5RdVFgiJhOU811D6Llx26C9RmuTT59dcX2xKt7rfX-TACxFkaEnYmSa_aqPdNs96Q3PA42fmOmzxG4ML-en6zRMCyPi4zId3znj25V7T7vB7rvF7niUtmo-CQUQXqHkujWEeiKbUvsIZWUWZw53Q8n1If-UETcZmaYcYVF2MuDP4_tnCxw6C0NQxp8kv3gfZgGEecr5kiG7y_ON7w";
+        String jwtString = "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiaXRjYXN0In0.lQOqL1s4DpDHROUAibkz6EMf6hcM7HmTPgmg-SlkacVoQAV7y3XQ7LXxiua6SJlN_uNX_EFjzIshEg_kyy972DtymtRMc2NIO5HzIF5I4oQCxNPsJdhu6qQni6sTas3q0JbAarMZSajDX7HhzVSYWPQJCussA4e1r9oFxDcoAo6TEAXOW8gRHzNIygQz1yCj6mdf4UOHI070kRy7f3BdhmrUJdOuDIMoRBYS4WsEOibAU1UCNPaJAXpZC0ihrtdY7SCg1N43fimeFOHrfpLb6OmRF7v7uvGMgrhg9JIYDbJ6nbode5OJkNceRx8QUICre2yKAe0ctlvXO0REf6OpRA";
         //校验jwt令牌
         Jwt jwt = JwtHelper.decodeAndVerify(jwtString, new RsaVerifier(publickey));
         //拿到jwt令牌中自定义的内容

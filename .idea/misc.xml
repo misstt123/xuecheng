@@ -24,6 +24,7 @@
         <option value="$PROJECT_DIR$/xc-service-learning/pom.xml" />
         <option value="$PROJECT_DIR$/xc-service-ucenter-auth/pom.xml" />
         <option value="$PROJECT_DIR$/xc-service-ucenter/pom.xml" />
+        <option value="$PROJECT_DIR$/xc-govern-gateway/pom.xml" />
       </list>
     </option>
   </component>

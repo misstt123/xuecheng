@@ -9,6 +9,7 @@
       <module fileurl="file://$PROJECT_DIR$/xc-framework-parent/xc-framework-parent.iml" filepath="$PROJECT_DIR$/xc-framework-parent/xc-framework-parent.iml" />
       <module fileurl="file://$PROJECT_DIR$/xc-framework-utils/xc-framework-utils.iml" filepath="$PROJECT_DIR$/xc-framework-utils/xc-framework-utils.iml" />
       <module fileurl="file://$PROJECT_DIR$/xc-govern-center/xc-govern-center.iml" filepath="$PROJECT_DIR$/xc-govern-center/xc-govern-center.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xc-govern-gateway/xc-govern-gateway.iml" filepath="$PROJECT_DIR$/xc-govern-gateway/xc-govern-gateway.iml" />
       <module fileurl="file://$PROJECT_DIR$/xc-service-api/xc-service-api.iml" filepath="$PROJECT_DIR$/xc-service-api/xc-service-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/xc-service-base-filesystem/xc-service-base-filesystem.iml" filepath="$PROJECT_DIR$/xc-service-base-filesystem/xc-service-base-filesystem.iml" />
       <module fileurl="file://$PROJECT_DIR$/xc-service-learning/xc-service-learning.iml" filepath="$PROJECT_DIR$/xc-service-learning/xc-service-learning.iml" />

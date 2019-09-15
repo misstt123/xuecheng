@@ -1,7 +1,8 @@
 package com.xuecheng.auth.Controller;
 
 import com.xuecheng.api.auth.AuthControllerApi;
-import com.xuecheng.auth.service.AuthService;
+
+
 import com.xuecheng.framework.domain.ucenter.ext.AuthToken;
 import com.xuecheng.framework.domain.ucenter.request.LoginRequest;
 import com.xuecheng.framework.domain.ucenter.response.AuthCode;
@@ -20,14 +21,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
+import com.xuecheng.auth.service.AuthService;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.Map;
+
 /**
  * @Description:
  * @Author lyh-god
- * @Date 2019/9/12
+ * @Date 2019/9/13
  **/
 @RestController
 @RequestMapping("/")

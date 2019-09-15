@@ -1,5 +1,6 @@
 package com.xuecheng.manage_cms;
 
+import com.xuecheng.framework.interceptor.FeignClientInterceptor;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
@@ -24,6 +25,11 @@ import org.springframework.web.client.RestTemplate;
 public class ManageCmsApplication {
     public static void main(String[] args) {
         SpringApplication.run(ManageCmsApplication.class,args);
+    }
+
+    @Bean
+    public FeignClientInterceptor feignClientInterceptor(){
+        return new FeignClientInterceptor();
     }
 
     @Bean

@@ -28,7 +28,7 @@ import java.util.stream.Collectors;
 public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
 
     //公钥
-    private static final String PUBLIC_KEY = "publickey1.txt";
+    private static final String PUBLIC_KEY = "publickey.txt";
 
     //定义JwtTokenStore，使用jwt令牌
     @Bean
@@ -65,7 +65,7 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
                 //下边的路径放行
                 .antMatchers("/v2/api-docs", "/swagger-resources/configuration/ui",
                         "/swagger-resources","/swagger-resources/configuration/security",
-                        "/swagger-ui.html","/webjars/**").permitAll()
+                        "/swagger-ui.html","/webjars/**","/course/coursepic/list/**","/course/courseview/**").permitAll()
                 .anyRequest().authenticated();
     }
 }

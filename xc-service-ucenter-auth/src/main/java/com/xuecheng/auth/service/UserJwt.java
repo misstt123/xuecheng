@@ -7,11 +7,6 @@ import org.springframework.security.core.userdetails.User;
 
 import java.util.Collection;
 
-/**
- * @Description:
- * @Author lyh-god
- * @Date 2019/9/12
- **/
 @Data
 @ToString
 public class UserJwt extends User {

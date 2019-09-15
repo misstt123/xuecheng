@@ -29,7 +29,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * @Description:
  * @Author lyh-god
- * @Date 2019/9/12
+ * @Date 2019/9/13
  **/
 @Service
 public class AuthService {
@@ -138,7 +138,7 @@ public class AuthService {
         //申请令牌信息
         Map bodyMap = exchange.getBody();
         if(bodyMap == null ||
-                bodyMap.get("access_token") == null ||
+            bodyMap.get("access_token") == null ||
                 bodyMap.get("refresh_token") == null ||
                 bodyMap.get("jti") == null){
 

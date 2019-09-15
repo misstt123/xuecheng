@@ -3,9 +3,12 @@ package com.xuecheng.api.course;
 import com.xuecheng.framework.domain.course.CoursePic;
 import com.xuecheng.framework.domain.course.Teachplan;
 import com.xuecheng.framework.domain.course.TeachplanMedia;
+import com.xuecheng.framework.domain.course.ext.CourseInfo;
 import com.xuecheng.framework.domain.course.ext.CourseView;
 import com.xuecheng.framework.domain.course.ext.TeachplanNode;
+import com.xuecheng.framework.domain.course.request.CourseListRequest;
 import com.xuecheng.framework.domain.course.response.CoursePublishResult;
+import com.xuecheng.framework.model.response.QueryResponseResult;
 import com.xuecheng.framework.model.response.ResponseResult;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -41,6 +44,10 @@ public interface CourseControllerApi {
 
     @ApiOperation("保存课程计划与媒资文件关联")
     public ResponseResult savemedia(TeachplanMedia teachplanMedia);
-
+    //课程查询
+    @ApiOperation("课程查询")
+    public QueryResponseResult<CourseInfo> findCourseList(int page,
+                                                          int size,
+                                                          CourseListRequest courseListRequest);
 
 }

@@ -37,7 +37,7 @@ auth:
   cookieMaxAge: -1
 encrypt:
   key-store:
-    location: classpath:/xc1.keystore
+    location: classpath:/xc.keystore
     secret: xuechengkeystore
     alias: xckey
     password: xuecheng

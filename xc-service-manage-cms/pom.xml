@@ -12,6 +12,11 @@
 
     <artifactId>xc-service-manage-cms</artifactId>
     <dependencies>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-oauth2</artifactId>
+            <version>2.0.1.RELEASE</version>
+        </dependency>
         <!--微服务注册客户端 -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
